@@ -31,3 +31,4 @@ for i in range(steps):
   print("b: %f" % sess.run(b))
   # Suggested by @jihobak
 print("cost: %f" % sess.run(cost, feed_dict=feed))
+print('test done!')
