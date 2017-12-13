@@ -2,12 +2,12 @@ import numpy as np
 import tensorflow as tf
 
 # Model linear regression y = Wx + b
-x = tf.placeholder(tf.float32, [None, 1])
+x = tf.placeholder(tf.float32, [None, 1])  # None is placeholder, 1 is 1-D;eg[None, 784] represent 784 number is unknown
 W = tf.Variable(tf.zeros([1,1]))
 b = tf.Variable(tf.zeros([1]))
 product = tf.matmul(x,W)
 y = product + b
-y_ = tf.placeholder(tf.float32, [None, 1])
+y_ = tf.placeholder(tf.float32, [None, 1]) #
 
 # Cost function sum((y_-y)**2)
 cost = tf.reduce_mean(tf.square(y_-y))
